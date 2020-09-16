@@ -1,5 +1,4 @@
 ---
 - name: Install nginx
   hosts: 192.168.1.100
-  become_user: [student]
   become: true
