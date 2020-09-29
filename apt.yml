@@ -1,6 +1,7 @@
----
-- hosts: all
-  tasks:
-    - name: ensure kazam is at the latest version
-      apt: name=kazam state=latest
-    
+tasks:
+  - hosts: all
+  - name: Update repositories cache and install "python-minimal" package
+    become: yes
+    apt:
+      name: kazam
+      update_cache: yes
