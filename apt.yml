@@ -1,9 +1,6 @@
 ---
-- name: Make a file
-  hosts: 192.168.1.100
-
+- hosts: Linux_Hosts
   tasks:
-    - name: Create a file
-      copy:
-        content: test
-        dest: /tmp/test.txt
+    - name: ensure kazam is at the latest version
+      apt: name=kazam state=latest
+  
