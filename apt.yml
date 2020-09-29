@@ -1,6 +1,5 @@
 ---
-- hosts: Linux_Hosts
-  tasks:
+- tasks:
     - name: ensure kazam is at the latest version
       apt: name=kazam state=latest
   
