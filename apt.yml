@@ -1,12 +1,9 @@
 ---
-  - hosts: all
-    user: vagrant
-    sudo: yes
-    
-    tasks:
-    - name: Update repositories cache and install "python-minimal" package
-      become: yes
-      apt:
-        name: kazam
-        update_cache: yes 
-        state: latest
+- hosts: all
+  user: vagrant
+  sudo: yes
+  
+  tasks:
+    - name: ensure nginx is at the latest version
+      apt: name=kazam state=latest  
+
