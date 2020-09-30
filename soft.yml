@@ -1,0 +1,9 @@
+- hosts: db_servers
+  tasks:
+    - name: Ansible apt install packages example
+      become: true
+      become_user: root
+      apt:
+        name: zip
+        state: present
+        update_cache: true
