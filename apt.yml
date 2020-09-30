@@ -1,8 +1,7 @@
 ---
-- hosts: all
-  sudo: yes
-  
+- hosts: servers
+  become: true
+  become_user: root
   tasks:
-    - name: ensure nginx is at the latest version
-      apt: name=kazam state=latest  
-
+    - name: Update apt repo and cache on all Debian/Ubuntu boxes
+      apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
