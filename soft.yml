@@ -4,6 +4,6 @@
       become: true
       become_user: root
       apt:
-        name: zip
+        name: kazam
         state: present
         update_cache: true
