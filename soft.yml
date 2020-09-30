@@ -1,4 +1,4 @@
-- hosts: db_servers
+- hosts: all
   tasks:
     - name: Ansible apt install packages example
       become: true
