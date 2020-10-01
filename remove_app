@@ -1,0 +1,4 @@
+- name: Remove "foo" package
+  apt:
+    name: foo
+    state: absent
