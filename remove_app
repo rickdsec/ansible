@@ -1,4 +1,10 @@
-- name: Remove "foo" package
-  apt:
-    name: foo
-    state: absent
+- hosts: all
+  tasks:
+    - name: Remove "gimp" package
+      become: true
+      become_user: root
+      apt:
+        name: gimp
+        state: absent
+
+    
