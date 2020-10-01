@@ -1,1 +1,9 @@
-
+- hosts: all
+  tasks:
+    - name: Ansible apt install packages example
+      become: true
+      become_user: root
+      apt:
+        name: gimp
+        state: present
+        update_cache: true
