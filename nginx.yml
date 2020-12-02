@@ -1,0 +1,9 @@
+- hosts: all
+  tasks:
+    - name: Ansible apt install nginx
+      become: true
+      become_user: root
+      apt:
+        name: nginx
+        state: present
+        update_cache: true
